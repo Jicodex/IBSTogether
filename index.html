@@ -1,18 +1,1064 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBSTogether</title>
     <!-- ========== All Css Link  -->
-     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- ==== responsive css  -->
+    <link rel="stylesheet" href="assets/css/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-none">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My IBS Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Treatment Reviews</a>
+            </li>
+          </ul>
+
+          <form class="d-flex ms-auto position-relative d-none d-lg-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="search_button" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="64"
+                height="64"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#3366cc"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(3.55556,3.55556)">
+                    <path
+                      d="M31,11c-11.027,0 -20,8.973 -20,20c0,11.027 8.973,20 20,20c3.97417,0 7.67238,-1.17843 10.78906,-3.18555l12.9375,12.9375c1.664,1.664 4.36239,1.664 6.02539,0c1.664,-1.664 1.664,-4.36139 0,-6.02539l-12.9375,-12.9375c2.00712,-3.11668 3.18555,-6.8149 3.18555,-10.78906c0,-11.027 -8.973,-20 -20,-20zM31,19c6.616,0 12,5.384 12,12c0,6.616 -5.384,12 -12,12c-6.616,0 -12,-5.384 -12,-12c0,-6.616 5.384,-12 12,-12z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </form>
+          <div class="btn-holder d-none d-lg-flex">
+            <a class="btn_my btn-1 hover-filled-opacity" href="#">
+              <span>Login</span>
+            </a>
+            <a class="btn_my btn-2 hover-filled-opacity" href="#">
+              <span>Sign Up</span>
+            </a>
+            <button id="theme-toggle-desktop">
+              <img
+                id="theme-icon-desktop"
+                src="assets/icons/moon.svg"
+                alt="theme icon"
+              />
+            </button>
+          </div>
+
+          <div class="d-lg-none w-100">
+            <form class="d-flex position-relative mt-3">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="search_button" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="64"
+                  height="64"
+                  viewBox="0,0,256,256"
+                >
+                  <g
+                    fill="#3366cc"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(3.55556,3.55556)">
+                      <path
+                        d="M31,11c-11.027,0 -20,8.973 -20,20c0,11.027 8.973,20 20,20c3.97417,0 7.67238,-1.17843 10.78906,-3.18555l12.9375,12.9375c1.664,1.664 4.36239,1.664 6.02539,0c1.664,-1.664 1.664,-4.36139 0,-6.02539l-12.9375,-12.9375c2.00712,-3.11668 3.18555,-6.8149 3.18555,-10.78906c0,-11.027 -8.973,-20 -20,-20zM31,19c6.616,0 12,5.384 12,12c0,6.616 -5.384,12 -12,12c-6.616,0 -12,-5.384 -12,-12c0,-6.616 5.384,-12 12,-12z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </form>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My IBS Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Treatment Reviews</a>
+              </li>
+            </ul>
+
+            <div class="btn-holder mt-3 mb-3">
+              <a class="btn_my btn-1 hover-filled-opacity ml-2" href="#">
+                <span>Login</span>
+              </a>
+              <a class="btn_my btn-2 hover-filled-opacity ml-2" href="#">
+                <span>Sign Up</span>
+              </a>
+              <button id="theme-toggle-mobile">
+                <img
+                  id="theme-icon-mobile"
+                  src="assets/icons/moon.png"
+                  alt="theme icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main_manu d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="menu_option">
+              <ul class="d-flex justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My IBS Story</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Treatment Reviews</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== Navbar Css Here End  -->
+    <!-- Subscribe Section -->
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <div class="container">
+        <h2>Stay Updated with IBSTogether</h2>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section class="stories-section">
+      <div class="container">
+        <h3>Real IBS Stories. Real Treatment Reviews. Real Relief.</h3>
+        <p>
+          Join thousands of people sharing authentic IBS experiences,
+          <a href="#">symptom management journeys</a>, and
+          <a href="#">honest treatment reviews</a> to help you find what
+          actually works. Discover <a href="#">practical tips</a> and connect
+          with a <a href="#">supportive community</a> that understands your
+          journey.
+        </p>
+        <button class="share-btn">Share Your Story</button>
+      </div>
+    </section>
+    <!-- ====== My Story  -->
+    <section id="home" class="section" role="region" aria-label="Home Section">
+      <div class="container">
+        <h2 class="mb-4">
+          <i class="bi bi-house-fill icon me-2"></i>
+
+          My Story & Why IBSTogether Exists
+        </h2>
+
+        <p class="mb-3">
+          For over a decade, I struggled with unpredictable IBS symptoms that
+          left me feeling hopeless and isolated. Multiple gastroenterologists,
+          countless medications, and endless diet modifications seemed to lead
+          nowhere.
+        </p>
+
+        <p class="mb-3">
+          Everything changed when I discovered the power of
+          <em>real stories from others with IBS</em>. What medical textbooks
+          couldn't tell me, fellow patients could. Through these shared
+          experiences, I found treatment combinations I'd never considered and
+          finally achieved relief.
+        </p>
+
+        <div class="quote mb-4">
+          "In the chorus of shared stories, I found the notes to my own
+          healing." – Founder, IBSTogether
+        </div>
+
+        <p class="mb-4">
+          I created IBSTogether as the resource I wish I'd had during my darkest
+          days – a place where our collective experiences contain wisdom that
+          medical professionals alone might miss. Whether you're newly diagnosed
+          or a long-time IBS warrior, you'll find practical advice and emotional
+          support here.
+        </p>
+
+        <div class="text-center mb-4">
+          <a href="my-ibs-journey.html" class="btn btn-primary"
+            >Read My Complete IBS Journey</a
+          >
+        </div>
+
+        <div class="disclaimer">
+          <strong>Important:</strong> All content on IBSTogether.com is for
+          educational purposes only and not a substitute for professional
+          medical advice. Always consult with a healthcare provider for
+          personalized treatment plans and medical guidance.
+        </div>
+      </div>
+    </section>
+    <!-- ==== ibs_by_the_numbers_section  -->
+    <section class="ibs_by_the_numbers_section">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <h2 class="section_title ibs_section_title">
+              <i class="bi bi-bar-chart-line-fill me-2"></i>IBS By the Numbers
+            </h2>
+            <p class="section_subtitle ibs_section_subtitle">
+              A snapshot of Irritable Bowel Syndrome’s global reach, economic
+              impact, and the power of community support.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="card ibs_card h-100">
+              <div class="card-body text-center">
+                <div class="icon_wrapper mb-3">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3 class="card_heading">700M+</h3>
+                <p class="card_sub_heading">LIVING WITH IBS WORLDWIDE</p>
+                <p class="card-text">
+                  Over 700 million people experience IBS symptoms globally,
+                  spanning every continent and culture.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card ibs_card h-100">
+              <div class="card-body text-center">
+                <div class="icon_wrapper mb-3">
+                  <i class="bi bi-currency-dollar"></i>
+                </div>
+                <h3 class="card_heading">$20B+</h3>
+                <p class="card_sub_heading">ANNUAL GLOBAL COST</p>
+                <p class="card-text">
+                  From doctor visits to medications, IBS drives over $20 billion
+                  in healthcare spending each year.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card ibs_card h-100">
+              <div class="card-body text-center">
+                <div class="icon_wrapper mb-3">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <h3 class="card_heading">10-15%</h3>
+                <p class="card_sub_heading">AFFECTED GLOBALLY</p>
+                <p class="card-text">
+                  Up to 1 in 7 people worldwide deal with IBS, though many
+                  suffer in silence without a diagnosis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card ibs_card h-100">
+              <div class="card-body text-center">
+                <div class="icon_wrapper mb-3">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <h3 class="card_heading">50%+</h3>
+                <p class="card_sub_heading">FIND RELIEF TOGETHER</p>
+                <p class="card-text">
+                  More than half of IBS patients improve with peer support,
+                  proving community is key to coping.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p class="footer_text">
+              Data compiled from: IFFGD, NIH, and IBSTogether Community Insights
+              (2024)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-news-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-12">
+            <h3 class="card-heading">
+              <i class="bi bi-trophy-fill"></i> Success Story Spotlight
+            </h3>
+            <div class="card p-4">
+              <div class="profile-header d-flex align-items-center mb-3">
+                <div class="profile-initials me-2">CM</div>
+                <span class="profile-name">Christine M.</span>
+              </div>
+              <h4 class="story-title">
+                From Housebound to Hiking: My IBS Turnaround
+              </h4>
+              <p class="story-text">
+                "After 12 years of severe IBS-D that left me afraid to leave
+                home, I finally found a combination of treatments that gave me
+                my life back. Low FODMAP diet and stress management were key for
+                me."
+              </p>
+              <a href="#" class="read-more">Read Christine's Story →</a>
+            </div>
+          </div>
+          <div class="col-lg-12 mt-5">
+            <h3 class="card-heading">
+              <i class="bi bi-newspaper"></i> Recent News
+            </h3>
+            <div class="card p-4">
+              <h4 class="news-title">FDA Approves New IBS-D Medication</h4>
+              <p class="news-text">
+                The latest FDA-approved treatment shows promising results for
+                diarrheapredominant IBS patients in clinical trials. Early
+                studies suggest it may reduce abdominal pain by up to 30%.
+              </p>
+              <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="treatment-reviews"
+      class="section"
+      role="region"
+      aria-label="Treatment Reviews Section"
+    >
+      <div class="container">
+        <h2 class="section-title">
+          <i class="bi bi-capsule icon"></i> IBS Medication & Treatment Reviews
+        </h2>
+        <p class="description">
+          Detailed reviews of IBS medications, supplements, and symptom
+          management products from verified users who share honest feedback on
+          what helps their irritable bowel syndrome. Browse ratings and
+          experiences to find potential relief options.
+        </p>
+        <div class="quote-container my-4 p-4">
+          <p class="quote-text mb-0">
+            "Knowledge is power, but shared experience is empowerment." –
+            <span class="quote-author">Anonymous IBS Warrior</span>
+          </p>
+        </div>
+
+        <div class="submit-cta text-center my-5 p-4 rounded">
+          <h3 class="cta-title">
+            <i class="bi bi-star cta-icon"></i>
+            Share Your Treatment Experience
+          </h3>
+          <p class="cta-description">
+            Help others find relief by reviewing an IBS treatment you've tried.
+          </p>
+          <a href="#add-review" class="btn btn-primary mt-3">Add Your Review</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="treatments-section">
+          <h3 class="treatment-category-title">
+            <i class="bi bi-capsule icon"></i> Prescription Medications
+          </h3>
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 treatments-grid"
+          >
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Linzess</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.1/5)</span>
+                  </div>
+                  <p class="card-text text-muted">For IBS-C</p>
+                  <p class="review-count">Combined: 152 reviews</p>
+                  <p class="review-source">Drugs.com: 128 | IBSTogether: 24</p>
+                  <a
+                    href="https://www.drugs.com/comments/linaclotide/linzess-for-irritable-bowel-syndrome.html"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Drugs.com Reviews</a
+                  >
+                  <a
+                    href="#add-linzess-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Xifaxan</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(3.8/5)</span>
+                  </div>
+                  <p class="card-text text-muted">For IBS-D</p>
+                  <p class="review-count">Combined: 118 reviews</p>
+                  <p class="review-source">Drugs.com: 95 | IBSTogether: 23</p>
+                  <a
+                    href="https://www.drugs.com/comments/rifaximin/xifaxan-for-irritable-bowel-syndrome.html"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Drugs.com Reviews</a
+                  >
+                  <a
+                    href="#add-xifaxan-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Amitiza</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(3.2/5)</span>
+                  </div>
+                  <p class="card-text text-muted">For IBS-C</p>
+                  <p class="review-count">Combined: 92 reviews</p>
+                  <p class="review-source">Drugs.com: 73 | IBSTogether: 19</p>
+                  <a
+                    href="https://www.drugs.com/comments/lubiprostone/amitiza-for-irritable-bowel-syndrome.html"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Drugs.com Reviews</a
+                  >
+                  <a
+                    href="#add-amitiza-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Viberzi</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.0/5)</span>
+                  </div>
+                  <p class="card-text text-muted">For IBS-D</p>
+                  <p class="review-count">Combined: 85 reviews</p>
+                  <p class="review-source">Drugs.com: 64 | IBSTogether: 21</p>
+                  <a
+                    href="https://www.drugs.com/comments/eluxadoline/viberzi-for-irritable-bowel-syndrome.html"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Drugs.com Reviews</a
+                  >
+                  <a
+                    href="#add-viberzi-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="treatments-section">
+          <h3 class="treatment-category-title">
+            <i class="fas fa-leaf icon"></i>Supplements
+          </h3>
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 treatments-grid"
+          >
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">IBgard</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.3/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Peppermint Oil</p>
+                  <p class="review-count">Combined: 1,256 reviews</p>
+                  <p class="review-source">Amazon: 1,200 | IBSTogether: 56</p>
+                  <a
+                    href="https://www.amazon.com/IBgard-Medical-Peppermint-Capsules-Abdominal/dp/B01N4EX42H"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-ibgard-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Align</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.4/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Probiotic</p>
+                  <p class="review-count">Combined: 5,142 reviews</p>
+                  <p class="review-source">Amazon: 5,000 | IBSTogether: 142</p>
+                  <a
+                    href="https://www.amazon.com/Align-Probiotic-Gastroenterologist-Recommended-Prebiotic/dp/B00QJ8EZM2"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a href="#add-align-review" class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">FiberCon</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(3.3/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Fiber Supplement</p>
+                  <p class="review-count">Combined: 189 reviews</p>
+                  <p class="review-source">Amazon: 100 | IBSTogether: 89</p>
+                  <a
+                    href="https://www.amazon.com/FiberCon-Fiber-Therapy-Constipation-Caplets/dp/B001G7QS0A"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-fibercon-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Heather's Tummy</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.6/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Acacia Fiber</p>
+                  <p class="review-count">Combined: 3,107 reviews</p>
+                  <p class="review-source">Amazon: 3,000 | IBSTogether: 107</p>
+                  <a
+                    href="https://www.amazon.com/Heathers-Tummy-Fiber-Organic-Pouches/dp/B0002UDK4Q"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-heathers-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="treatments-section">
+          <h3 class="treatment-category-title">
+            <i class="fas fa-spa icon"></i>Lifestyle Products
+          </h3>
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 treatments-grid"
+          >
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Squatty Potty</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.6/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Toilet Stool</p>
+                  <p class="review-count">Combined: 25,198 reviews</p>
+                  <p class="review-source">Amazon: 25,000 | IBSTogether: 198</p>
+                  <a
+                    href="https://www.amazon.com/Squatty-Potty-Original-Bathroom-Toilet/dp/B00DS2BW3M"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-squatty-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Hot Water Bottle</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.4/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Pain Relief</p>
+                  <p class="review-count">Combined: 4,165 reviews</p>
+                  <p class="review-source">Amazon: 4,000 | IBSTogether: 165</p>
+                  <a
+                    href="https://www.amazon.com/Samplife-Water-Bottle-Classic-Transparent/dp/B07X5Z5X5K"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-hotwater-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Heating Pad</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.3/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Cramp Relief</p>
+                  <p class="review-count">Combined: 10,134 reviews</p>
+                  <p class="review-source">Amazon: 10,000 | IBSTogether: 134</p>
+                  <a
+                    href="https://www.amazon.com/Sunbeam-Heating-Pad-Back-Shoulder/dp/B00075M1T6"
+                    target="_blank"
+                    class="btn btn-sm btn-link me-2"
+                    >Amazon Reviews</a
+                  >
+                  <a
+                    href="#add-heatingpad-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="treatment-card card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Meditation App</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">(4.2/5)</span>
+                  </div>
+                  <p class="card-text text-muted">Stress Relief</p>
+                  <p class="review-count">Combined: 92 reviews</p>
+                  <p class="review-source">IBSTogether: 92</p>
+                  <a
+                    href="#add-meditation-review"
+                    class="add-review-link btn btn-sm"
+                    >Add Your Review</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="community-stories" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-users icon"></i>Patient IBS Stories & Experiences
+        </h2>
+        <p class="description">
+          Authentic symptom journeys from real people at every stage of their
+          IBS treatment path - from diagnosis to long-term management strategies
+          that actually work.
+        </p>
+        <div class="quote-container my-4 p-4">
+          <p class="quote-text mb-0">
+            "We rise by lifting others – and sometimes, by sharing our falls." –
+            <span class="quote-author">Community Member</span>
+          </p>
+        </div>
+        <div class="submit-cta text-center my-5 p-4 rounded">
+          <h3 class="cta-title">
+            <i class="fas fa-share-alt cta-icon"></i> Share Your IBS Journey
+          </h3>
+          <p class="cta-description">
+            Your story could be the hope someone else needs. Share your
+            experience, challenges, and triumphs.
+            <em class="d-block d-sm-inline-block mt-2 mt-sm-0"
+              >(Requires login)</em
+            >
+          </p>
+          <a href="#login" class="btn btn-primary mt-3">Log In to Share</a>
+        </div>
+        <div class="disclaimer my-4 p-3 border rounded">
+          <strong>Disclaimer:</strong> Stories are personal experiences and not
+          medical advice. Consult a healthcare professional before making health
+          decisions based on this content.
+        </div>
+        <div class="row row-cols-1 row-md-2 g-4">
+          <div class="col">
+            <div class="story-card card h-100">
+              <div class="card-body">
+                <div class="story-meta d-flex align-items-center mb-3">
+                  <div class="story-avatar me-3">JD</div>
+                  <div>
+                    <div class="story-author fw-bold">John D.</div>
+                    <div class="story-date text-muted">2 days ago</div>
+                  </div>
+                </div>
+                <h4 class="story-title fw-bold">
+                  Finding Relief After 8 Years with IBS-D
+                </h4>
+                <p class="story-text">
+                  When I was diagnosed with IBS at 25, I never imagined how much
+                  it would impact my life. After trying countless medications
+                  and diets, here's what finally worked for me: a combination of
+                  Xifaxan and daily probiotics stabilized my symptoms
+                  significantly.
+                </p>
+                <div class="story-tags mb-3">
+                  <span class="tag badge me-1">IBS-D</span>
+                  <span class="tag badge me-1">Diet Changes</span>
+                  <span class="tag badge me-1">Medication</span>
+                  <span class="tag badge me-1">Success Story</span>
+                </div>
+                <div
+                  class="story-actions d-flex justify-content-between text-muted mt-auto pt-3 border-top"
+                >
+                  <span class="story-action me-3">
+                    <i class="bi bi-heart"></i> 42
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-chat"></i> 18
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-bookmark"></i> Save
+                  </span>
+
+                  <a
+                    href="#john-story"
+                    class="story-action ms-auto text-decoration-none fw-bold"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="story-card card h-100">
+              <div class="card-body">
+                <div class="story-meta d-flex align-items-center mb-3">
+                  <div class="story-avatar me-3">LS</div>
+                  <div>
+                    <div class="story-author fw-bold">Lisa S.</div>
+                    <div class="story-date text-muted">1 week ago</div>
+                  </div>
+                </div>
+                <h4 class="story-title fw-bold">
+                  My Journey with IBS-C and Anxiety
+                </h4>
+                <p class="story-text">
+                  The connection between my mental health and IBS symptoms was
+                  something I didn't understand until recently. Here's how
+                  addressing both changed everything: meditation and therapy
+                  reduced my flare-ups by nearly half.
+                </p>
+                <div class="story-tags mb-3">
+                  <span class="tag badge me-1">IBS-C</span>
+                  <span class="tag badge me-1">Anxiety</span>
+                  <span class="tag badge me-1">Mind-Body</span>
+                  <span class="tag badge me-1">In Progress</span>
+                </div>
+                <div
+                  class="story-actions d-flex justify-content-between text-muted mt-auto pt-3 border-top"
+                >
+                  <span class="story-action me-3">
+                    <i class="bi bi-heart"></i> 42
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-chat"></i> 18
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-bookmark"></i> Save
+                  </span>
+
+                  <a
+                    href="#lisa-story"
+                    class="story-action ms-auto text-decoration-none fw-bold"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="story-card card h-100">
+              <div class="card-body">
+                <div class="story-meta d-flex align-items-center mb-3">
+                  <div class="story-avatar me-3">RT</div>
+                  <div>
+                    <div class="story-author fw-bold">Robert T.</div>
+                    <div class="story-date text-muted">2 weeks ago</div>
+                  </div>
+                </div>
+                <h4 class="story-title fw-bold">
+                  IBS Journey: From Diagnosis to Management
+                </h4>
+                <p class="story-text">
+                  My 5-year journey with IBS-M has been full of ups and downs.
+                  The surprising combination that finally helped me regain
+                  control: low FODMAP diet paired with Heather's Tummy Fiber
+                  made a huge difference.
+                </p>
+                <div class="story-tags mb-3">
+                  <span class="tag badge me-1">IBS-M</span>
+                  <span class="tag badge me-1">FODMAP</span>
+                  <span class="tag badge me-1">Probiotics</span>
+                  <span class="tag badge me-1">Success Story</span>
+                </div>
+                <div
+                  class="story-actions d-flex justify-content-between text-muted mt-auto pt-3 border-top"
+                >
+                  <span class="story-action me-3">
+                    <i class="bi bi-heart"></i> 42
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-chat"></i> 18
+                  </span>
+                  <span class="story-action me-3">
+                    <i class="bi bi-bookmark"></i> Save
+                  </span>
+
+                  <a
+                    href="#robert-story"
+                    class="story-action ms-auto text-decoration-none fw-bold"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footnote text-center pt-4">
+        <p>IBSTogether - Supporting our community since 2024</p>
+      </div>
+      </div>
+    </section>
+    <footer class="footer" role="contentinfo">
+      <div class="container py-5">
+        <div class="row g-4 justify-content-between">
+          <div class="col-md-6 col-lg-4 footer-logo-section">
+            <div class="logo d-flex align-items-center mb-3">
+              <div class="logo-icon-circle me-3">
+                <i class="fas fa-hand-holding-heart logo-icon"></i>
+              </div>
+              <div>
+                <div class="logo-text">IBSTogether</div>
+                <div class="tagline">Where healing begins with sharing</div>
+              </div>
+            </div>
+            <p class="footer-description">
+              Supporting the IBS community with real stories and practical
+              solutions since 2024.
+            </p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-2 footer-links-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="#about" class="text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-decoration-none">Contact</a>
+              </li>
+              <li>
+                <a href="#privacy" class="text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#terms" class="text-decoration-none">Terms of Use</a>
+              </li>
+              <li><a href="#faq" class="text-decoration-none">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 col-lg-2 footer-contact mb-4">
+            <h4>Get in Touch</h4>
+            <p><i class="fas fa-envelope me-2"></i>support@ibstogether.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-disclaimer text-center py-3">
+        <div class="container">
+          <p class="mb-0">
+            <strong>Disclaimer:</strong> The information on IBSTogether.com is
+            for educational purposes only and is not a substitute for
+            professional medical advice, diagnosis, or treatment. Always consult
+            a healthcare professional before making health decisions based on
+            this content. Reliance on any information provided is at your own
+            risk.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <div class="container">
+          <p class="mb-0">© 2024 IBSTogether. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     <!-- ========== All JS Link  -->
-     <script src="assets/js/jquery-1.12.4.min.js"></script>
-     <script src="assets/js/bootstrap.min.js"></script>
-     <script src="assets/js/script.js"></script>
-</body>
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
