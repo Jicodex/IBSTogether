@@ -50,3 +50,21 @@ if (themeToggleDesktop) {
 if (themeToggleMobile) {
   themeToggleMobile.addEventListener("click", toggleTheme);
 }
+
+// Get the button
+const backButton = document.getElementById("backButton");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backButton.classList.add("show");
+    } else {
+        backButton.classList.remove("show");
+    }
+});
+
+backButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Smooth scroll to top
+    });
+});

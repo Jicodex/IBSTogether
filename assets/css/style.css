@@ -1083,3 +1083,31 @@ body {
   color: var(--dark_color);
   margin-top: 20px;
 }
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: -150px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: right 0.6s ease, opacity 0.6s ease;
+}
+
+.back-btn.show {
+    right: 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
