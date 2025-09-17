@@ -88,6 +88,9 @@ body {
   box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
   border: 0.5px solid var(--dark_color);
 }
+.nav-link:focus, .nav-link:hover {
+	color: var(--secondary_color);
+}
 /* ====== Navbar Style  */
 /* ====== Navbar Style  */
 .navbar {
@@ -370,7 +373,7 @@ body {
 }
 .stories-section h3 {
   color: #2d4fc1;
-  font-size: var(--section_text_size);
+  font-size: var(--heading_text_size);
   font-weight: 800;
   margin-bottom: 1.2rem;
 }
@@ -1111,3 +1114,273 @@ body {
     height: 20px;
     margin-right: 8px;
 }
+
+/* =====================================
+=========== My IBS Story Page Style 
+===================================== */
+/* --- Hero Section --- */
+        #my_stories_hero_section {
+            background-color: var(--secondary_bg_color);
+        }
+        .my_stories_hero_text h1 {
+            font-size: var(--heading_text_size);
+            font-weight: 800;
+            color: var(--primary_color);
+        }
+        .my_stories_hero_text p{
+            font-size: var(--medium_text_size);
+            color: var(--dark_color);
+        }
+        .my_stories_bio p{
+            color: var(--dark_color);
+            font-size: var(--medium_text_size);
+        }
+        .my_stories_hero_text h4 {
+            color: var(--dark_color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: var(--medium_text_size);
+        }
+
+        /* --- Main Content --- */
+        #my_stories_main_section{
+            background-color: var(--white_color);
+        }
+        .my_stories_bio .my_picture {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 5px 30px 15px 0;
+            border: 5px solid var(--white_color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .quote-block {
+            border-left: 5px solid var(--primary_color);
+            padding: 25px 30px;
+            margin: 40px 0;
+            font-size: var(--small_text_size);
+            background-color: var(--dark_color);
+            font-style: italic;
+            color: var(--white_color);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* --- Sidebar --- */
+        .sidebar-card {
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--white_color);
+        }
+        .sidebar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        .sidebar-card .card-header {
+            background-color: var(--primary_color);
+            border-bottom: none;
+            padding: 15px 20px;
+            border-radius: 12px 12px 0 0 !important;
+        }
+        .sidebar-card .card-header h3 {
+            margin: 0;
+            font-size: var(--medium_text_size);
+            color: var(--white_color);
+            font-weight: 600;
+        }
+        .sidebar-card .card-header h3 i {
+            margin-right: 10px;
+        }
+        /* About Me Card Specifics */
+        .about_card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--primary_color);
+            margin-top: -60px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .about_card h3{
+            font-size: var(--section_text_size);
+            color: var(--primary_color);
+        }
+        .about_card  span{
+            color: var(--dark_color) !important;
+            font-size: var(--small_text_size);
+        }
+        .about_card p{
+            color: var(--dark_color);
+        }
+        .about_social_media a {
+            font-size: 22px;
+            margin: 0 12px;
+            transition: transform 0.3s ease;
+        }
+        .about_social_media a:hover {
+            transform: scale(1.2);
+            color: var(--primary_hover_color);
+        }
+        .btn-swap {
+            background-color: var(--primary_color);
+            color: var(--white_color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(51, 102, 204, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-swap:hover {
+            background-color: var(--primary_hover_color);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(42, 85, 179, 0.4);
+        }
+        .about_ibs h6 {
+            color: var(--primary_color);
+            font-weight: 700;
+            font-size: var(--section_text_size);
+        }
+
+        /* Events & Recommended Card */
+        .event_box h3{
+            font-size: var(--small_text_size);
+            color: var(--dark_color);
+        }
+        .event_box:not(:last-child) {
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .event_box span { color: var(--secondary_color); font-weight: 700; }
+        .my_recommended ul { list-style: none; padding-left: 0; }
+        .my_recommended li a { display: flex; align-items: flex-start; padding: 8px 0; border-radius: 5px; transition: background-color 0.3s;
+        text-decoration: none;
+        color: var(--dark_color);
+        }
+        .my_recommended li a:hover { background-color: var(--secondary_bg_color); color: var(--primary_color); }
+        .my_recommended li a i { color: var(--primary_color); margin-right: 12px; padding-top: 4px; }
+        
+        /* --- Timeline Section --- */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10px;
+            height: 100%;
+            width: 4px;
+            background: #e7f0fd;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 50px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 22px;
+            width: 22px;
+            background: var(--white_color);
+            border: 5px solid var(--primary_color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary_color);
+        }
+        .timeline-content {
+            background: var(--white_color);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+#my_ibs_timeline h2{
+    color: var(--primary_color);
+    font-size: var(--section_text_size);
+}
+.timeline-content h3{
+    color: var(--primary_color);
+    font-size: var(--medium_text_size);
+}
+.timeline-content p{
+    color: var(--dark_color) !important;
+    font-size: var(--small_text_size) !important;
+}
+        /* --- Key Insights --- */
+        .highlight-item {
+            border: 1px solid #e7f0fd;
+            border-left: 5px solid var(--secondary_color);
+            background: var(--secondary_bg_color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .highlight-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        .highlight-icon {
+            font-size: 24px;
+            color: var(--secondary_color);
+            background-color: var(--white_color);
+            min-width: 60px;
+            height: 60px;
+            border: 2px solid var(--secondary_bg_color);
+        }
+        .highlight-content h4 { font-size: var(--medium_text_size); font-weight: 700; color: var(--primary_color); }
+.highlight-content p{
+    font-size: var(--small_text_size);
+    color: var(--dark_color);
+}
+        /* --- Custom Lists --- */
+        .styled-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .styled-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+        }
+      
+        #key_insights{
+            background-color: var(--white_color);
+        }
+        #key_insights h2{
+            color: var(--primary_color);
+            font-size: var(--section_text_size);
+        }
+        #current_management h2{
+            color: var(--primary_color);
+            font-size: var(--section_text_size);
+        }
+        #current_management p{
+            color: var(--dark_color);
+            font-size: var(--medium_text_size);
+        }
+        #current_management ul li{
+            color: var(--dark_color);
+            font-size: var(--medium_text_size);
+        }
+        #current_management ul li strong{
+            color: var(--primary_color);
+            font-size: var(--medium_text_size);
+        }
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .my_stories_bio .my_picture {
+                float: none;
+                display: block;
+                margin: 0 auto 30px;
+            }
+        }
