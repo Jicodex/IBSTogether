@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBSTogether</title>
+    <!-- ========== All Css Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- ==== responsive css  -->
+    <link rel="stylesheet" href="assets/css/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-none">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="bi bi-house-fill icon me-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My IBS Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Treatment Reviews</a>
+            </li>
+          </ul>
+
+          <form class="d-flex ms-auto position-relative d-none d-lg-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="search_button" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="64"
+                height="64"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#3366cc"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="scale(3.55556,3.55556)">
+                    <path
+                      d="M31,11c-11.027,0 -20,8.973 -20,20c0,11.027 8.973,20 20,20c3.97417,0 7.67238,-1.17843 10.78906,-3.18555l12.9375,12.9375c1.664,1.664 4.36239,1.664 6.02539,0c1.664,-1.664 1.664,-4.36139 0,-6.02539l-12.9375,-12.9375c2.00712,-3.11668 3.18555,-6.8149 3.18555,-10.78906c0,-11.027 -8.973,-20 -20,-20zM31,19c6.616,0 12,5.384 12,12c0,6.616 -5.384,12 -12,12c-6.616,0 -12,-5.384 -12,-12c0,-6.616 5.384,-12 12,-12z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </form>
+          <div class="btn-holder d-none d-lg-flex">
+            <a class="btn_my btn-1 hover-filled-opacity" href="#">
+              <span>Login</span>
+            </a>
+            <a class="btn_my btn-2 hover-filled-opacity" href="#">
+              <span>Sign Up</span>
+            </a>
+            <button id="theme-toggle-desktop">
+              <img
+                id="theme-icon-desktop"
+                src="assets/icons/moon.svg"
+                alt="theme icon"
+              />
+            </button>
+          </div>
+
+          <div class="d-lg-none w-100">
+            <form class="d-flex position-relative mt-3">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="search_button" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="64"
+                  height="64"
+                  viewBox="0,0,256,256"
+                >
+                  <g
+                    fill="#3366cc"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(3.55556,3.55556)">
+                      <path
+                        d="M31,11c-11.027,0 -20,8.973 -20,20c0,11.027 8.973,20 20,20c3.97417,0 7.67238,-1.17843 10.78906,-3.18555l12.9375,12.9375c1.664,1.664 4.36239,1.664 6.02539,0c1.664,-1.664 1.664,-4.36139 0,-6.02539l-12.9375,-12.9375c2.00712,-3.11668 3.18555,-6.8149 3.18555,-10.78906c0,-11.027 -8.973,-20 -20,-20zM31,19c6.616,0 12,5.384 12,12c0,6.616 -5.384,12 -12,12c-6.616,0 -12,-5.384 -12,-12c0,-6.616 5.384,-12 12,-12z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </form>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="bi bi-house-fill icon me-2"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-book-fill me-2"></i>My IBS Story</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-capsule me-2"></i>Treatment Reviews</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-newspaper me-2"></i> Recent News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-people-fill"></i> Community Stories</a
+                >
+              </li>
+            </ul>
+
+            <div class="btn-holder mt-3 mb-3">
+              <a class="btn_my btn-1 hover-filled-opacity ml-2" href="#">
+                <span>Login</span>
+              </a>
+              <a class="btn_my btn-2 hover-filled-opacity ml-2" href="#">
+                <span>Sign Up</span>
+              </a>
+              <button id="theme-toggle-mobile">
+                <img
+                  id="theme-icon-mobile"
+                  src="assets/icons/moon.png"
+                  alt="theme icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main_manu d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="menu_option">
+              <ul class="d-flex justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    ><i class="bi bi-house-fill icon me-2"></i>Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="bi bi-book-fill me-2"></i>My IBS Story</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="bi bi-capsule me-2"></i>Treatment Reviews</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="bi bi-newspaper me-2"></i> Recent News</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="bi bi-people-fill"></i> Community Stories</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== Navbar Css Here End  -->
+
+    <!-- ========== Recent News Area Start Here ==========  -->
+    <!-- ========== Community Stories Start ========== -->
+    <div class="story_section">
+      <section class="ibs-stories container py-5">
+        <h2 class="text-center section_title">
+          <i class="bi bi-people"></i> Patient IBS Stories & Experiences
+        </h2>
+        <p class="text-center section_bio">
+          Authentic symptom journeys from real people at every stage of their
+          IBS treatment path.
+        </p>
+
+        <!-- Share Story CTA -->
+        <div class="ibs-share-story text-center my-4">
+          <h3><i class="bi bi-share"></i> Share Your IBS Journey</h3>
+          <p>
+            Your story could be the hope someone else needs. Share your
+            experience, challenges, and triumphs.
+          </p>
+          <a href="https://ibstogether.com/story/add" class="btn btn-swap"
+            ><span>Share Your Story</span></a
+          >
+        </div>
+
+        <!-- Story Cards -->
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-6 col-12">
+            <div class="ibs-story-card p-4 shadow-sm">
+              <div class="ibs-story-meta d-flex align-items-center">
+                <div class="story-avatar" style="background: #3616bf">RI</div>
+                <div class="story_man">
+                  <div class="fw-bold">Riya</div>
+                  <div class="text-muted">5 months ago</div>
+                </div>
+              </div>
+              <h5 class="ibs-story-title mt-3">
+                This is a story title jholok update 15 by riya
+              </h5>
+              <p class="des_story">Assess Your Work From Home Readiness...</p>
+              <div class="ibs-tags">
+                <span class="badge bg-primary">Heating Pad</span>
+                <span class="badge bg-success">success</span>
+                <span class="badge bg-info">Lifestyle Products</span>
+              </div>
+              <div
+                class="ibs-story-actions mt-3 d-flex justify-content-between"
+              >
+                <div class="d-flex gap-3">
+                    <button id="like-btn-16" data-id="16" class="ibs-like-btn">
+                  <i id="like-icon-16" class="bi bi-heart me-1"></i>
+                  <span id="like-count-16">(1)</span>
+                </button>
+                <span class="comment_text">
+                  <i class="bi bi-chat-dots me-1"></i> 0
+                </span>
+                </div>
+                <a class="read_more" href="https://ibstogether.com/story/show/16">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-12">
+            <div class="ibs-story-card p-4 shadow-sm">
+              <div class="ibs-story-meta d-flex align-items-center">
+                <div class="story-avatar" style="background: #3616bf">RI</div>
+                <div class="story_man">
+                  <div class="fw-bold">Riya</div>
+                  <div class="text-muted">5 months ago</div>
+                </div>
+              </div>
+              <h5 class="ibs-story-title mt-3">
+                This is a story title jholok update 15 by riya
+              </h5>
+              <p class="des_story">Assess Your Work From Home Readiness...</p>
+              <div class="ibs-tags">
+                <span class="badge bg-primary">Heating Pad</span>
+                <span class="badge bg-success">success</span>
+                <span class="badge bg-info">Lifestyle Products</span>
+              </div>
+              <div
+                class="ibs-story-actions mt-3 d-flex justify-content-between"
+              >
+                <div class="d-flex gap-3">
+                    <button id="like-btn-16" data-id="16" class="ibs-like-btn">
+                  <i id="like-icon-16" class="bi bi-heart me-1"></i>
+                  <span id="like-count-16">(1)</span>
+                </button>
+                <span class="comment_text">
+                  <i class="bi bi-chat-dots me-1"></i> 0
+                </span>
+                </div>
+                <a class="read_more" href="https://ibstogether.com/story/show/16">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-12">
+            <div class="ibs-story-card p-4 shadow-sm">
+              <div class="ibs-story-meta d-flex align-items-center">
+                <div class="story-avatar" style="background: #3616bf">RI</div>
+                <div class="story_man">
+                  <div class="fw-bold">Riya</div>
+                  <div class="text-muted">5 months ago</div>
+                </div>
+              </div>
+              <h5 class="ibs-story-title mt-3">
+                This is a story title jholok update 15 by riya
+              </h5>
+              <p class="des_story">Assess Your Work From Home Readiness...</p>
+              <div class="ibs-tags">
+                <span class="badge bg-primary">Heating Pad</span>
+                <span class="badge bg-success">success</span>
+                <span class="badge bg-info">Lifestyle Products</span>
+              </div>
+              <div
+                class="ibs-story-actions mt-3 d-flex justify-content-between"
+              >
+                <div class="d-flex gap-3">
+                    <button id="like-btn-16" data-id="16" class="ibs-like-btn">
+                  <i id="like-icon-16" class="bi bi-heart me-1"></i>
+                  <span id="like-count-16">(1)</span>
+                </button>
+                <span class="comment_text">
+                  <i class="bi bi-chat-dots me-1"></i> 0
+                </span>
+                </div>
+                <a class="read_more" href="https://ibstogether.com/story/show/16">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-12">
+            <div class="ibs-story-card p-4 shadow-sm">
+              <div class="ibs-story-meta d-flex align-items-center">
+                <div class="story-avatar" style="background: #3616bf">RI</div>
+                <div class="story_man">
+                  <div class="fw-bold">Riya</div>
+                  <div class="text-muted">5 months ago</div>
+                </div>
+              </div>
+              <h5 class="ibs-story-title mt-3">
+                This is a story title jholok update 15 by riya
+              </h5>
+              <p class="des_story">Assess Your Work From Home Readiness...</p>
+              <div class="ibs-tags">
+                <span class="badge bg-primary">Heating Pad</span>
+                <span class="badge bg-success">success</span>
+                <span class="badge bg-info">Lifestyle Products</span>
+              </div>
+              <div
+                class="ibs-story-actions mt-3 d-flex justify-content-between"
+              >
+                <div class="d-flex gap-3">
+                    <button id="like-btn-16" data-id="16" class="ibs-like-btn">
+                  <i id="like-icon-16" class="bi bi-heart me-1"></i>
+                  <span id="like-count-16">(1)</span>
+                </button>
+                <span class="comment_text">
+                  <i class="bi bi-chat-dots me-1"></i> 0
+                </span>
+                </div>
+                <a class="read_more" href="https://ibstogether.com/story/show/16">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav>
+          <ul class="pagination justify-content-center my-5">
+            <li class="page-item disabled">
+              <a class="page-link">&laquo; Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item disabled">
+              <a class="page-link">Next &raquo;</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mt-4">
+          <a href="https://ibstogether.com" class="btn">
+            <i class="bi bi-arrow-left"></i>
+ Back Home
+          </a>
+        </div>
+      </section>
+    </div>
+    <!-- ========== Community Stories End ========== -->
+
+    <!-- ========== Recent News Area End Here ==========  -->
+
+    <footer class="footer" role="contentinfo">
+      <div class="container py-5">
+        <div class="row g-4 justify-content-between">
+          <div class="col-md-6 col-lg-4 footer-logo-section">
+            <div class="logo d-flex align-items-center mb-3">
+              <div class="logo-icon-circle me-3">
+                <i class="fas fa-hand-holding-heart logo-icon"></i>
+              </div>
+              <div>
+                <div class="logo-text">IBSTogether</div>
+                <div class="tagline">Where healing begins with sharing</div>
+              </div>
+            </div>
+            <p class="footer-description">
+              Supporting the IBS community with real stories and practical
+              solutions since 2024.
+            </p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-2 footer-links-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="#about" class="text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-decoration-none">Contact</a>
+              </li>
+              <li>
+                <a href="#privacy" class="text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#terms" class="text-decoration-none">Terms of Use</a>
+              </li>
+              <li><a href="#faq" class="text-decoration-none">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 col-lg-2 footer-contact mb-4">
+            <h4>Get in Touch</h4>
+            <p><i class="fas fa-envelope me-2"></i>support@ibstogether.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-disclaimer text-center py-3">
+        <div class="container">
+          <p class="mb-0">
+            <strong>Disclaimer:</strong> The information on IBSTogether.com is
+            for educational purposes only and is not a substitute for
+            professional medical advice, diagnosis, or treatment. Always consult
+            a healthcare professional before making health decisions based on
+            this content. Reliance on any information provided is at your own
+            risk.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3">
+        <div class="container">
+          <p class="mb-0">© 2024 IBSTogether. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back Button -->
+    <a
+      id="backButton"
+      href="javascript:void(0);"
+      class="back-btn d-flex align-items-center"
+    >
+      <img src="assets/icons/top_arrow.png" alt="Back" class="back-icon" /> Top
+    </a>
+    <script>
+      $(document).on("click", '[id^="like-btn-"]', function () {
+        let storyId = $(this).data("id");
+        $.post(
+          `/story/${storyId}/like`,
+          { _token: "RFMSgOFXHrIKZuM1oGPjsFX03KPQYY3s5vUHCdMK" },
+          function (data) {
+            $("#like-count-" + storyId).text(`(${data.like_count})`);
+            if (data.status === "liked") {
+              $("#like-icon-" + storyId).css("color", "red");
+              $("#like-count-" + storyId).css("color", "red");
+            } else {
+              $("#like-icon-" + storyId).css("color", "black");
+              $("#like-count-" + storyId).css("color", "black");
+            }
+          }
+        );
+      });
+    </script>
+    <!-- ========== All JS Link  -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
